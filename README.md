@@ -6,6 +6,15 @@
 <hr />
 <br />
 
+### Setup in local machine(linux)
+```
+pip3 install -r requirements.txt
+```
+```
+python3 app.py
+```
+<br />
+<br />
 
 ## API Docs
 
