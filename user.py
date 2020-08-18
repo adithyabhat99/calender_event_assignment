@@ -22,8 +22,7 @@ def create_user():
         token = jwt.encode({"id": str(user.id), "name": user.name, "exp": datetime.datetime.now(
         )+datetime.timedelta(days=10)}, "secret key")
         return jsonify({"success": True, "message": "user created", "Token": token.decode("UTF-8")}), 200
-    except Exception as e:
-        print(e)
+    except:
         return jsonify({"success": False, "message": "send unique email. error occured"}), 500
 
 
@@ -39,7 +38,7 @@ def authenticate():
         password_hash = user.password_hash
         if check_password_hash(password_hash, auth.password):
             token = jwt.encode({"id": str(user.id), "name": user.name, "exp": datetime.datetime.now(
-            )+datetime.timedelta(days=10)}, app.secret_key)
+            )+datetime.timedelta(days=10)}, "secret key")
             return jsonify({"success": True, "message": "authentication successful", "Token": token.decode("UTF-8")}), 200
         else:
             return jsonify({"success": False, "message": "wrong password"}), 401
