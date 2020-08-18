@@ -42,7 +42,7 @@ chmod +x start.sh
 ### /api/user/auth POST
 ##### get auth token
 - Example input
-###### set "Set authorization header(Basic Auth) with email as "username" and password
+###### Set authorization header(Basic Auth) with email as "username" and password
 ![auth](https://user-images.githubusercontent.com/30742449/90519442-a7c7a380-e185-11ea-898d-0a1c1e7e1b03.png)
 
 - Example output
@@ -58,9 +58,11 @@ chmod +x start.sh
 ![example usage](https://user-images.githubusercontent.com/30742449/90519455-aa29fd80-e185-11ea-9a6a-1920a42efc49.png)
 
 <hr />
+<br />
 
 ### /api/user  PUT
 ##### updates user(name,email,password)
+- requires auth token
 - Example input
 ```
 {
@@ -79,7 +81,7 @@ chmod +x start.sh
 
 ### /api/user  GET
 ##### get user details
-- Requires auth token
+- requires auth token
 - Example output
 ```
 {
