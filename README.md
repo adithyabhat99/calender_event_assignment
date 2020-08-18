@@ -8,10 +8,8 @@
 
 ### Setup in local machine(linux)
 ```
-pip3 install -r requirements.txt
-```
-```
-python3 app.py
+chmod +x start.sh
+./start.sh
 ```
 <br />
 <br />
