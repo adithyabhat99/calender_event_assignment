@@ -13,6 +13,6 @@ Base.query = db_session.query_property()
 
 from models import *
 def init_db():
-    engine.execute("drop table user")
-    engine.execute("drop table event")
+    # engine.execute("drop table user")
+    # engine.execute("drop table event")
     Base.metadata.create_all(bind=engine)
